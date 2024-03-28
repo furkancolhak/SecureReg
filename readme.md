@@ -3,18 +3,7 @@ SecReg Dataset
 
 ### Overview
 
-The SecReg Dataset is a curated collection of website URLs categorized as either benign (safe) or malicious. It was created by combining data from two primary sources: the Alexa 1m dataset and OpenPhish.
-
-### Data Collection Process
-
-1.  **Benign URLs**: Initially, we randomly selected safe website URLs from the Alexa 1m dataset.
-    
-2.  **Malicious URLs**: We gathered malicious URLs from OpenPhish.
-    
-3.  **Domain Extraction**: Using a WHOIS tool designed for open-source intelligence (OSINT), we extracted domain names from these URLs and removed their top-level domains (TLDs).
-    
-4.  **Duplicate Removal**: Duplicate domain names and those already present in the top 100k list on Alexa were eliminated to ensure data integrity.
-    
+We gathered data from two different sources to create our dataset. Initially, we obtained benign (safe) website URLs from the Alexa 1m dataset by randomly selecting them. Then, we gathered malicious URLs from OpenPhish. Using a WHOIS tool designed explicitly for open-source intelligence (OSINT), we extracted domain names from these URLs and removed their top-level domains (TLDs). Subsequently, we eliminated duplicate domain names and those already present in the top 100k list on Alexa. This step was crucial as we utilized the Alexa top 100k list as a fictional database of registrants. 
 
 ### Data Distribution
 
