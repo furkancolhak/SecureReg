@@ -1,19 +1,16 @@
-Overview
+We gathered data from two different sources to create our dataset. Initially, we obtained benign (safe) website URLs from the Alexa 1m \cite{Alexa} dataset by randomly selecting them. Then, we gathered malicious URLs from OpenPhish. Using a WHOIS tool designed explicitly for open-source intelligence (OSINT), we extracted domain names from these URLs and removed their top-level domains (TLDs). Subsequently, we eliminated duplicate domain names and those already present in the top 100k list on Alexa. This step was crucial as we utilized the Alexa top 100k \cite{Alexa} list as a fictional database of registrants. 
 
-This repository offers a cybersecurity dataset comprising 10,000 malicious domain names from OpenPhish and an equally sized benign dataset from Alexa. Additionally, a fictional registration domain list aids in identifying patterns with new domains.
-Composition
+Table \ref{tab:data} shows data distribution in the SecReg Dataset.
 
-    Labeled domain list:
-        10,000 unique malicious domains which collected from OpenPhish live feed and 10,000 benign domains from Alexa dataset which randomly selected the last 50,000 of Alexa.
-
-Preprocessing
-
-    Excluded Top-Level Domains (TLDs):
-        Standardized datasets by focusing on core domain names.
-
-    Duplicate Removal:
-        Ensured dataset integrity with no duplicate entries.
-
-Usage
-
-Explore and leverage this dataset for cybersecurity research. The refined datasets and preprocessing steps provide a solid foundation for analysis and experimentation.
+\begin{table}[H]
+  \centering
+  \caption{Data Distribution in SecReg Dataset}
+  \label{tab:data}
+  \begin{tabular}{lccc}
+    \toprule
+    & \textbf{Benign} & \textbf{Malicious} & \textbf{Total} \\
+    \midrule
+    \textbf{SecReg Dataset} & 4,198 & 4,702 & 8,900 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
